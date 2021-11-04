@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Üni Tercih</string>
+    <string name="your_name">İsminiz</string>
+    <string name="male">Erkek</string>
+    <string name="female">Kadın</string>
+    <string name="begin">Başla</string>
+</resources>
