@@ -4,7 +4,6 @@ Rehberlik ve Psikolojik Danışmanlık
 Mimarlık
 İnşaat Mühendisliği
 Diş Hekimliği
-Sınıf Öğretmenliği
 Eczacılık
 Psikoloji
 Hemşirelik
@@ -15,6 +14,15 @@ Elektrik-Elektronik Mühendisliği
 Fizyoterapi ve Rehabilitasyon
 Endüstri Mühendisliği
 İktisat
+İngiliz Dili ve Edebiyatı
 Uluslararası İlişkiler
-Beslenme ve Diyetetik 
+Beslenme ve Diyetetik
 Türk Dili ve Edebiyatı
+Veterinerlik
+Havacılık Yönetimi
+Yönetim Bilişim Sistemleri
+Uluslararası Ticaret ve Lojistik
+Sınıf Öğretmenliği
+Felsefe
+Sinema ve Televizyon
+Gastronomi ve Mutfak Sanatları
