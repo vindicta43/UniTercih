@@ -4,4 +4,5 @@
     <string name="male">Erkek</string>
     <string name="female">Kadın</string>
     <string name="begin">Başla</string>
+    <string name="departments">Bölümler</string>
 </resources>

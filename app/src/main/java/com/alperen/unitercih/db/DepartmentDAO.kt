@@ -17,11 +17,10 @@ interface DepartmentDAO {
     fun deleteDepartment(department: Department)
 
     @Query("SELECT * FROM departments")
-    fun getAllDepartments() : List<Department>
+    fun getAllDepartments() : MutableList<Department>
 
     @Query("SELECT * FROM departments WHERE :field = :isTrueOrFalse")
     fun getFromDepartmentsWithField(field: String, isTrueOrFalse: Boolean) : List<Department>
-
 
 //    @Insert
 //    fun insertRule(vararg rules: Rule)

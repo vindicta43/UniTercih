@@ -3,7 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/forei/Desktop/uniTercih/app/src/main/res/layout/activity_detail.xml" value="0.17760416666666667" />
         <entry key="..\:/Users/forei/Desktop/uniTercih/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/forei/Desktop/uniTercih/app/src/main/res/layout/single_item_department.xml" value="0.25" />
+        <entry key="..\:/Users/forei/Desktop/uniTercih/app/src/main/res/menu/detail_menu.xml" value="0.19166666666666668" />
+        <entry key="..\:/Users/forei/Desktop/uniTercih/app/src/main/res/menu/main_menu.xml" value="0.1" />
+        <entry key="..\:/sdk/platforms/android-31/data/res/layout/simple_list_item_1.xml" value="0.19166666666666668" />
       </map>
     </option>
   </component>
