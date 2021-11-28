@@ -26,6 +26,5 @@ abstract class DepartmentDatabase : RoomDatabase() {
             }
             return dbInstance
         }
-
     }
 }

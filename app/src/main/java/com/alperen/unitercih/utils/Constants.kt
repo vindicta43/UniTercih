@@ -1,7 +1,6 @@
 package com.alperen.unitercih.utils
 
 import com.alperen.unitercih.db.Department
-import com.alperen.unitercih.db.Rule
 
 /**
  * Created by Alperen on 4.11.2021.
@@ -63,6 +62,62 @@ object Constants {
     const val QUESTION_24 = "Zor durumdakilere yardım etmeyi severim"
     const val QUESTION_25 = "Bir ekip yerine tek başıma çalışmayı tercih ederim"
 
+    val QUESTION_LIST = arrayListOf(
+        QUESTION_1,
+        QUESTION_2,
+        QUESTION_3,
+        QUESTION_4,
+        QUESTION_5,
+        QUESTION_6,
+        QUESTION_7,
+        QUESTION_8,
+        QUESTION_9,
+        QUESTION_10,
+        QUESTION_11,
+        QUESTION_12,
+        QUESTION_13,
+        QUESTION_14,
+        QUESTION_15,
+        QUESTION_16,
+        QUESTION_17,
+        QUESTION_18,
+        QUESTION_19,
+        QUESTION_20,
+        QUESTION_21,
+        QUESTION_22,
+        QUESTION_23,
+        QUESTION_24,
+        QUESTION_25,
+    )
+
+    val RULE_LIST = arrayListOf(
+        RULE_1,
+        RULE_2,
+        RULE_3,
+        RULE_4,
+        RULE_5,
+        RULE_6,
+        RULE_7,
+        RULE_8,
+        RULE_9,
+        RULE_10,
+        RULE_11,
+        RULE_12,
+        RULE_13,
+        RULE_14,
+        RULE_15,
+        RULE_16,
+        RULE_17,
+        RULE_18,
+        RULE_19,
+        RULE_20,
+        RULE_21,
+        RULE_22,
+        RULE_23,
+        RULE_24,
+        RULE_25,
+    )
+
     val CONSTANT_DEPARTMENTS = listOf(
         // Hukuk
         Department(
@@ -75,7 +130,7 @@ object Constants {
             isInterestedMoney = false,
             isInterestedTechDevices = false,
             isGoodDrawer = false,
-            isLikesBooksAndMovies = false,
+            isLikesBooksAndMovies = true,
             isGoodTeacher = false,
             isGoodListener = true,
             isInterestedCrafting = false,
@@ -86,7 +141,7 @@ object Constants {
             isHandleCrisis = false,
             isLikesOffice = true,
             isGoodAtFoods = false,
-            isWantsGovermentJob = true,
+            isWantsGovermentJob = false,
             isEligibleForManager = false,
             isWantsDifference = false,
             isEmotionalQuotientDominant = false,

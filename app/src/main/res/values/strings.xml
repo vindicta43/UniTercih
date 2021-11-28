@@ -5,4 +5,9 @@
     <string name="female">Kadın</string>
     <string name="begin">Başla</string>
     <string name="departments">Bölümler</string>
+    <string name="department_name">Bölüm Adı</string>
+    <string name="add_department">Bölüm Ekle</string>
+    <string name="yes">Evet</string>
+    <string name="no">Hayır</string>
+    <string name="ok">Tamam</string>
 </resources>

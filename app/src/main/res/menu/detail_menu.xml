@@ -4,6 +4,6 @@
     <item
         android:id="@+id/btnAddDepartment"
         android:icon="@drawable/ic_add"
-        android:title="@string/departments"
+        android:title="@string/add_department"
         app:showAsAction="always"/>
 </menu>
