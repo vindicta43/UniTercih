@@ -1,6 +1,9 @@
 package com.alperen.unitercih.db
 
-import androidx.room.*
+import androidx.room.Dao
+import androidx.room.Delete
+import androidx.room.Insert
+import androidx.room.Query
 
 /**
  * Created by Alperen on 4.11.2021.

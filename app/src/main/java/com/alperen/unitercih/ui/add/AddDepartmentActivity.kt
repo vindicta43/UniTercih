@@ -1,11 +1,11 @@
 package com.alperen.unitercih.ui.add
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.widget.RadioButton
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.alperen.unitercih.R
 import com.alperen.unitercih.databinding.ActivityAddDepartmentBinding
@@ -48,6 +48,7 @@ class AddDepartmentActivity : AppCompatActivity() {
                     AlertDialog.Builder(root.context)
                         .setMessage(R.string.missing_department_name)
                         .setPositiveButton(R.string.ok) { _, _ -> }
+                        .show()
                 }
             }
         }
@@ -61,6 +62,7 @@ class AddDepartmentActivity : AppCompatActivity() {
         AlertDialog.Builder(this)
             .setMessage(R.string.add_department_success)
             .setPositiveButton(R.string.ok) { _, _ -> }
+            .show()
     }
 
     private fun newDepartmentBuilder(departmentName: Editable): Department {
