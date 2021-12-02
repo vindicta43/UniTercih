@@ -118,6 +118,37 @@ data class Department(
     @ColumnInfo(name = Constants.RULE_25)
     var isLikesWorkAlone: Boolean,
 ) {
+    constructor(
+    ) : this(
+        0,
+        "",
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+    )
+
     override fun toString(): String {
         return Constants.QUESTION_1 + " --> $isMemoriseGood\n" +
                 Constants.QUESTION_2 + " --> $isHumanReleationsGood\n" +

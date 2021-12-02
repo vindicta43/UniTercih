@@ -37,29 +37,27 @@ object Constants {
     const val QUESTION_1 = "Ezber yeteneğim iyidir"
     const val QUESTION_2 = "İnsan ilişkilerinde iyiyimdir"
     const val QUESTION_3 = "Sayısal yeteneklerime güvenirim"
-    const val QUESTION_4 = "Karmaşık sistemler kurabileceğime inanıyorum"
+    const val QUESTION_4 = "Karmaşık sistemler kurabileceğime inanıyorum" // deistir
     const val QUESTION_5 = "Para ve parayla ilgili şeylerle ilgilenmekten hoşlanırım"
     const val QUESTION_6 = "Teknolojik cihazlara ilgim var"
     const val QUESTION_7 = "İyi bir çizerim"
     const val QUESTION_8 = "Kitap okumayı, film ve dizi izlemeyi severim"
-    const val QUESTION_9 = "Bildiğim bir konuyu diğer insanlara rahatlıkla öğretebiliyorum"
+    const val QUESTION_9 = "Bildiğim bir konuyu insanlara rahatlıkla öğretebilirim"
     const val QUESTION_10 = "İyi bir dinleyiciyimdir"
-    const val QUESTION_11 = "Yeni bir şeyler oluşturmayı, yapmayı severim"
-    const val QUESTION_12 = "Ufkumu açan bilgiler öğrenmek beni mutlu ediyor"
+    const val QUESTION_11 = "Yeni bir şeyler oluşturmayı, üretmeyi, yapmayı severim"
+    const val QUESTION_12 = "Ufkumu açan yeni bilgiler öğrenmek hoşuma gidiyor"
     const val QUESTION_13 = "Ellerim titremez/çok az titrer"
-    const val QUESTION_14 = "Yabancı dil benim için bir problem değil"
+    const val QUESTION_14 = "Yabancı dil konusunda sıkıntı çekmem"
     const val QUESTION_15 = "Sağlık sektörüne ilgim var"
     const val QUESTION_16 = "Kriz yönetimi yapabilirim"
-    const val QUESTION_17 =
-        "Bir sahada çalışmak yerine ofiste veya kapalı alanda çalışmayı tercih ederim"
-    const val QUESTION_18 =
-        "Yemeklerle ilgili bilgimin diğer insanlardan daha iyi olduğunu düşünüyorum"
+    const val QUESTION_17 = "Bir sahada çalışmak yerine ofiste çalışmayı tercih ederim" // deistir
+    const val QUESTION_18 = "Yemek yapmak ve yemek kültürü ilgimi çekiyor"
     const val QUESTION_19 = "Devlet bünyesinde bir iş istiyorum"
-    const val QUESTION_20 = "Birçok çalışanın müdürü olmaya uygunum"
+    const val QUESTION_20 = "Bir topluluğa yönetici olmak için uygun birisiyim"
     const val QUESTION_21 = "Aynı şeyi defalarca yapmaktan sıkılan, yenilik arayan biriyim"
     const val QUESTION_22 = "Duygusal zekam, mantıksal zekama göre daha ön plandadır"
     const val QUESTION_23 = "Programlamaya ilgim var/seviyorum"
-    const val QUESTION_24 = "Zor durumdakilere yardım etmeyi severim"
+    const val QUESTION_24 = "Zor durumdakilere yardım etmeyi severim" // deistir
     const val QUESTION_25 = "Bir ekip yerine tek başıma çalışmayı tercih ederim"
 
     val QUESTION_LIST = arrayListOf(
@@ -170,7 +168,7 @@ object Constants {
             isForeignLanguageEasy = false,
             isInterestedMedical = true,
             isHandleCrisis = true,
-            isLikesOffice = true,
+            isLikesOffice = false,
             isGoodAtFoods = false,
             isWantsGovermentJob = true,
             isEligibleForManager = false,
@@ -178,7 +176,7 @@ object Constants {
             isEmotionalQuotientDominant = false,
             isLikesProgramming = false,
             isLikesHelping = true,
-            isLikesWorkAlone = true
+            isLikesWorkAlone = false
         ),
 
         // Rehberlik ve Psikolojik Danismanlik
@@ -219,27 +217,27 @@ object Constants {
             isMemoriseGood = false,
             isHumanReleationsGood = true,
             isArithmeticGood = false,
-            isComplexSystemGood = false,
+            isComplexSystemGood = true,
             isInterestedMoney = false,
             isInterestedTechDevices = false,
-            isGoodDrawer = false,
+            isGoodDrawer = true,
             isLikesBooksAndMovies = true,
             isGoodTeacher = false,
-            isGoodListener = true,
+            isGoodListener = false,
             isInterestedCrafting = false,
-            isLikesLearnBrilliantKnowledge = true,
+            isLikesLearnBrilliantKnowledge = false,
             isHandsDontVibrate = false,
             isForeignLanguageEasy = false,
             isInterestedMedical = false,
             isHandleCrisis = false,
             isLikesOffice = true,
             isGoodAtFoods = false,
-            isWantsGovermentJob = true,
+            isWantsGovermentJob = false,
             isEligibleForManager = false,
             isWantsDifference = false,
-            isEmotionalQuotientDominant = true,
+            isEmotionalQuotientDominant = false,
             isLikesProgramming = false,
-            isLikesHelping = true,
+            isLikesHelping = false,
             isLikesWorkAlone = true
         ),
 
@@ -294,7 +292,7 @@ object Constants {
             isForeignLanguageEasy = false,
             isInterestedMedical = true,
             isHandleCrisis = false,
-            isLikesOffice = true,
+            isLikesOffice = false,
             isGoodAtFoods = false,
             isWantsGovermentJob = false,
             isEligibleForManager = false,
@@ -333,7 +331,7 @@ object Constants {
             isEmotionalQuotientDominant = false,
             isLikesProgramming = false,
             isLikesHelping = false,
-            isLikesWorkAlone = true
+            isLikesWorkAlone = false
         ),
 
         // Psikoloji
@@ -387,7 +385,7 @@ object Constants {
             isForeignLanguageEasy = false,
             isInterestedMedical = true,
             isHandleCrisis = true,
-            isLikesOffice = true,
+            isLikesOffice = false,
             isGoodAtFoods = false,
             isWantsGovermentJob = true,
             isEligibleForManager = false,
@@ -449,7 +447,7 @@ object Constants {
             isForeignLanguageEasy = true,
             isInterestedMedical = false,
             isHandleCrisis = false,
-            isLikesOffice = true,
+            isLikesOffice = false,
             isGoodAtFoods = false,
             isWantsGovermentJob = false,
             isEligibleForManager = false,
@@ -542,7 +540,7 @@ object Constants {
             isForeignLanguageEasy = false,
             isInterestedMedical = true,
             isHandleCrisis = false,
-            isLikesOffice = true,
+            isLikesOffice = false,
             isGoodAtFoods = false,
             isWantsGovermentJob = true,
             isEligibleForManager = false,
@@ -550,7 +548,7 @@ object Constants {
             isEmotionalQuotientDominant = false,
             isLikesProgramming = false,
             isLikesHelping = true,
-            isLikesWorkAlone = true
+            isLikesWorkAlone = false
         ),
 
         // Endustri Muhendisligi
@@ -829,7 +827,7 @@ object Constants {
             isEmotionalQuotientDominant = false,
             isLikesProgramming = true,
             isLikesHelping = false,
-            isLikesWorkAlone = true
+            isLikesWorkAlone = false
         ),
 
         // Uluslararasi Ticaret ve Lojistik
@@ -883,7 +881,7 @@ object Constants {
             isForeignLanguageEasy = false,
             isInterestedMedical = false,
             isHandleCrisis = false,
-            isLikesOffice = true,
+            isLikesOffice = false,
             isGoodAtFoods = false,
             isWantsGovermentJob = true,
             isEligibleForManager = false,

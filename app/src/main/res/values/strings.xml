@@ -2,7 +2,7 @@
     <string name="app_name">Üni Tercih</string>
     <string name="your_name">İsminiz</string>
     <string name="male">Erkek</string>
-    <string name="female">Kadın</string>
+    <string name="female">Bayan</string>
     <string name="begin">Başla</string>
     <string name="departments">Bölümler</string>
     <string name="department_name">Bölüm Adı</string>
@@ -10,4 +10,6 @@
     <string name="yes">Evet</string>
     <string name="no">Hayır</string>
     <string name="ok">Tamam</string>
+    <string name="missing_department_name">Lütfen bölüm adını giriniz</string>
+    <string name="add_department_success">Bölüm başarıyla eklendi</string>
 </resources>

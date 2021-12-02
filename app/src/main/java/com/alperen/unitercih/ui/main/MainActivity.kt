@@ -23,6 +23,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var questionList: ArrayList<String>
     private lateinit var ruleList: ArrayList<String>
     private lateinit var binding: ActivityMainBinding
+    private var surveyText = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -97,6 +98,10 @@ class MainActivity : AppCompatActivity() {
             ruleList.add(it)
         }
 
+        // Clear survey text
+        surveyText = ""
+        binding.tvSurvey.text = ""
+
         startSurvey(name, gender)
     }
 
@@ -115,6 +120,11 @@ class MainActivity : AppCompatActivity() {
             setMessage(questionText)
             setCancelable(false)
             setButton(AlertDialog.BUTTON_POSITIVE, yes) { _, _ ->
+                // Update text
+                surveyText += "${questionList[randomNum]} => $yes\n"
+                binding.tvSurvey.text = surveyText
+                Log.e("metin", surveyText)
+
                 questionMapper(ruleList[randomNum], true)
                 questionList.removeAt(randomNum)
                 ruleList.removeAt(randomNum)
@@ -144,6 +154,11 @@ class MainActivity : AppCompatActivity() {
                 }
             }
             setButton(AlertDialog.BUTTON_NEGATIVE, no) { _, _ ->
+                // Update text
+                surveyText += "${questionList[randomNum]} => $no\n"
+                binding.tvSurvey.text = surveyText
+                Log.e("metin", surveyText)
+
                 questionMapper(ruleList[randomNum], false)
                 questionList.removeAt(randomNum)
                 ruleList.removeAt(randomNum)
@@ -179,11 +194,19 @@ class MainActivity : AppCompatActivity() {
     // Show result as Alert Dialog
     private fun showResult(name: Editable?, gender: CharSequence, departmentName: String) {
         if (gender == binding.btnFemale.text) {
+            surveyText += "$name hanım sizin için uygun bölüm: $departmentName\n"
+            binding.tvSurvey.text = surveyText
+            Log.e("metin", surveyText)
+
             AlertDialog.Builder(this)
                 .setMessage("$name hanım sizin için uygun bölüm: $departmentName")
                 .setPositiveButton("Tamam") { _, _ -> }
                 .show()
         } else {
+            surveyText += "$name bey sizin için uygun bölüm: $departmentName\n"
+            binding.tvSurvey.text = surveyText
+            Log.e("metin", surveyText)
+
             AlertDialog.Builder(this)
                 .setMessage("$name bey sizin için uygun bölüm: $departmentName")
                 .setPositiveButton("Tamam") { _, _ -> }
@@ -206,204 +229,113 @@ class MainActivity : AppCompatActivity() {
         when (rule) {
             Constants.RULE_1 -> {
                 val tempQuery = dbRef.departmentDAO().is_memorize_good(field)
-                val iter = departmentList.iterator()
-                iter.forEach {
-                    if (!tempQuery.contains(it))
-                        iter.remove()
-                }
+                removeFromList(tempQuery)
             }
             Constants.RULE_2 -> {
                 val tempQuery = dbRef.departmentDAO().is_human_releations_good(field)
-                val iter = departmentList.iterator()
-                iter.forEach {
-                    if (!tempQuery.contains(it))
-                        iter.remove()
-                }
+                removeFromList(tempQuery)
             }
             Constants.RULE_3 -> {
                 val tempQuery = dbRef.departmentDAO().is_arithmetic_good(field)
-                val iter = departmentList.iterator()
-                iter.forEach {
-                    if (!tempQuery.contains(it))
-                        iter.remove()
-                }
+                removeFromList(tempQuery)
             }
             Constants.RULE_4 -> {
                 val tempQuery = dbRef.departmentDAO().is_complex_system_good(field)
-                val iter = departmentList.iterator()
-                iter.forEach {
-                    if (!tempQuery.contains(it))
-                        iter.remove()
-                }
+                removeFromList(tempQuery)
             }
             Constants.RULE_5 -> {
                 val tempQuery = dbRef.departmentDAO().is_interested_money(field)
-                val iter = departmentList.iterator()
-                iter.forEach {
-                    if (!tempQuery.contains(it))
-                        iter.remove()
-                }
+                removeFromList(tempQuery)
             }
             Constants.RULE_6 -> {
                 val tempQuery = dbRef.departmentDAO().is_interested_tech_devices(field)
-                val iter = departmentList.iterator()
-                iter.forEach {
-                    if (!tempQuery.contains(it))
-                        iter.remove()
-                }
+                removeFromList(tempQuery)
             }
             Constants.RULE_7 -> {
                 val tempQuery = dbRef.departmentDAO().is_good_drawer(field)
-                val iter = departmentList.iterator()
-                iter.forEach {
-                    if (!tempQuery.contains(it))
-                        iter.remove()
-                }
+                removeFromList(tempQuery)
             }
             Constants.RULE_8 -> {
                 val tempQuery = dbRef.departmentDAO().is_likes_books_and_movies(field)
-                val iter = departmentList.iterator()
-                iter.forEach {
-                    if (!tempQuery.contains(it))
-                        iter.remove()
-                }
+                removeFromList(tempQuery)
             }
             Constants.RULE_9 -> {
                 val tempQuery = dbRef.departmentDAO().is_good_teacher(field)
-                val iter = departmentList.iterator()
-                iter.forEach {
-                    if (!tempQuery.contains(it))
-                        iter.remove()
-                }
+                removeFromList(tempQuery)
             }
             Constants.RULE_10 -> {
                 val tempQuery = dbRef.departmentDAO().is_likes_books_and_movies(field)
-                val iter = departmentList.iterator()
-                iter.forEach {
-                    if (!tempQuery.contains(it))
-                        iter.remove()
-                }
+                removeFromList(tempQuery)
             }
             Constants.RULE_11 -> {
                 val tempQuery = dbRef.departmentDAO().is_interested_crafting(field)
-                val iter = departmentList.iterator()
-                iter.forEach {
-                    if (!tempQuery.contains(it))
-                        iter.remove()
-                }
+                removeFromList(tempQuery)
             }
             Constants.RULE_12 -> {
                 val tempQuery = dbRef.departmentDAO().is_likes_learn_brilliant_knowledge(field)
-                val iter = departmentList.iterator()
-                iter.forEach {
-                    if (!tempQuery.contains(it))
-                        iter.remove()
-                }
+                removeFromList(tempQuery)
             }
             Constants.RULE_13 -> {
                 val tempQuery = dbRef.departmentDAO().is_hands_dont_vibrate(field)
-                val iter = departmentList.iterator()
-                iter.forEach {
-                    if (!tempQuery.contains(it))
-                        iter.remove()
-                }
+                removeFromList(tempQuery)
             }
             Constants.RULE_14 -> {
                 val tempQuery = dbRef.departmentDAO().is_foreign_language_easy(field)
-                val iter = departmentList.iterator()
-                iter.forEach {
-                    if (!tempQuery.contains(it))
-                        iter.remove()
-                }
+                removeFromList(tempQuery)
             }
             Constants.RULE_15 -> {
                 val tempQuery = dbRef.departmentDAO().is_interested_medical(field)
-                val iter = departmentList.iterator()
-                iter.forEach {
-                    if (!tempQuery.contains(it))
-                        iter.remove()
-                }
+                removeFromList(tempQuery)
             }
             Constants.RULE_16 -> {
                 val tempQuery = dbRef.departmentDAO().is_handle_crisis(field)
-                val iter = departmentList.iterator()
-                iter.forEach {
-                    if (!tempQuery.contains(it))
-                        iter.remove()
-                }
+                removeFromList(tempQuery)
             }
             Constants.RULE_17 -> {
                 val tempQuery = dbRef.departmentDAO().is_likes_office(field)
-                val iter = departmentList.iterator()
-                iter.forEach {
-                    if (!tempQuery.contains(it))
-                        iter.remove()
-                }
+                removeFromList(tempQuery)
             }
             Constants.RULE_18 -> {
                 val tempQuery = dbRef.departmentDAO().is_good_at_foods(field)
-                val iter = departmentList.iterator()
-                iter.forEach {
-                    if (!tempQuery.contains(it))
-                        iter.remove()
-                }
+                removeFromList(tempQuery)
             }
             Constants.RULE_19 -> {
                 val tempQuery = dbRef.departmentDAO().is_wants_goverment_job(field)
-                val iter = departmentList.iterator()
-                iter.forEach {
-                    if (!tempQuery.contains(it))
-                        iter.remove()
-                }
+                removeFromList(tempQuery)
             }
             Constants.RULE_20 -> {
                 val tempQuery = dbRef.departmentDAO().is_eligible_for_manager(field)
-                val iter = departmentList.iterator()
-                iter.forEach {
-                    if (!tempQuery.contains(it))
-                        iter.remove()
-                }
+                removeFromList(tempQuery)
             }
             Constants.RULE_21 -> {
                 val tempQuery = dbRef.departmentDAO().is_wants_difference(field)
-                val iter = departmentList.iterator()
-                iter.forEach {
-                    if (!tempQuery.contains(it))
-                        iter.remove()
-                }
+                removeFromList(tempQuery)
             }
             Constants.RULE_22 -> {
                 val tempQuery = dbRef.departmentDAO().is_emotional_quotient_dominant(field)
-                val iter = departmentList.iterator()
-                iter.forEach {
-                    if (!tempQuery.contains(it))
-                        iter.remove()
-                }
+                removeFromList(tempQuery)
             }
             Constants.RULE_23 -> {
                 val tempQuery = dbRef.departmentDAO().is_likes_programming(field)
-                val iter = departmentList.iterator()
-                iter.forEach {
-                    if (!tempQuery.contains(it))
-                        iter.remove()
-                }
+                removeFromList(tempQuery)
             }
             Constants.RULE_24 -> {
                 val tempQuery = dbRef.departmentDAO().is_likes_helping(field)
-                val iter = departmentList.iterator()
-                iter.forEach {
-                    if (!tempQuery.contains(it))
-                        iter.remove()
-                }
+                removeFromList(tempQuery)
             }
             else -> {
                 val tempQuery = dbRef.departmentDAO().is_likes_work_alone(field)
-                val iter = departmentList.iterator()
-                iter.forEach {
-                    if (!tempQuery.contains(it))
-                        iter.remove()
-                }
+                removeFromList(tempQuery)
             }
+        }
+    }
+
+    // Iterator for departmentList
+    private fun removeFromList(tempQuery: MutableList<Department>) {
+        val iterator = departmentList.iterator()
+        iterator.forEach {
+            if (!tempQuery.contains(it) && departmentList.size != 1)
+                iterator.remove()
         }
     }
 }
